@@ -15,8 +15,8 @@ To scan, you can run:
  # Analyse Terraform plan
  Checkcov can also analyze a Terraform plan. The plan must be saved as json. I prefer this as a point of proof for any misconfiguration that maybe was not captured before the plan step.
  
-$ terraform plan -out tfplan
-$ terraform show -json tfplan > tfplan.json
-$ checkov -f tfplan.json
+## terraform plan -out tfplan
+## terraform show -json tfplan > tfplan.json
+## checkov -f tfplan.json
 
 
