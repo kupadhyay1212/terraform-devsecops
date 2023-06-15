@@ -41,4 +41,5 @@ In addition to running checkcov in containers and via command as we did above, w
 
 You can check the whole file https://github.com/kupadhyay1212/terraform-devsecops
 
+References: https://medium.com/@calvineotieno010/hardening-terraform-ci-cd-building-a-reliable-terraform-code-ff76eafaf1e1
 
