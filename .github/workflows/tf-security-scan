@@ -1,0 +1,47 @@
+name: tf-scann
+
+on:
+  pull_request:
+  push:
+    branches: [branch-name]
+
+jobs:
+  checkov:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: run checkov
+      uses: bridgecrewio/checkov-action@master
+      with:
+        directory: .
+        soft_fail: true
+        framework: terraform
+
+  terraform:
+    needs: checkov
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.1.7
+
+    - name: Terraform Format
+      run: terraform fmt
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Plan and validate
+      run: |
+        terraform plan -out tfplan
+        terraform show -json tfplan > tfplan.json
+        docker run --volume "${{ env.GITHUB_WORKSPACE }}":/tf bridgecrew/checkov -f tfplan.json --soft-fail
