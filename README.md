@@ -1,4 +1,4 @@
-# demo-terraform-devsecops
+# terraform-devsecops
 A demo implementing DevSecOps and GitOps for IAC- Terraform with Checkcov
 
 ![image](https://github.com/kupadhyay1212/terraform-devsecops/assets/60917359/207fdb4b-04a5-41b4-af83-7977970b7500)
