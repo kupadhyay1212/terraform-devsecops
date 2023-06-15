@@ -7,6 +7,6 @@ A demo implementing DevSecOps and GitOps for IAC- Terraform with Checkcov
 we will go through how we can perform automated static analysis for Terraform code using Checkcov and GitHub Actions.
 # Analyze Terraform Directory
 To scan, you can run:
-|| checkov -d <terraform root directory> - compact ||
+|checkov -d <terraform root directory> - compact|
 
 
