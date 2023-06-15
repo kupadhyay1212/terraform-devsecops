@@ -36,6 +36,7 @@ Checkcov is a plugin you can use with pre-commit hooks. You can use it in your p
 One good thing with pre-commit hooks is to enforce adherence on the developer's computer, but pre-commit hooks can be silenced locally by a simple flag hence it’s good to run this in your workflow/pipeline to force adherence to company policy. You can’t turn this off in the repository where security measures are configured.
 
 In addition to running checkcov in containers and via command as we did above, we can have a GitHub Workflow and soft fail for the pre-commit hook.
+
 ![image](https://github.com/kupadhyay1212/terraform-devsecops/assets/60917359/890b914f-c672-4271-8f3f-27a51a388f86)
 
 You can check the whole file https://github.com/kupadhyay1212/terraform-devsecops
