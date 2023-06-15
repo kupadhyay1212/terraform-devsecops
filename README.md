@@ -19,4 +19,11 @@ To scan, you can run:
 ## terraform show -json tfplan > tfplan.json
 ## checkov -f tfplan.json
 
+# Run in a Container
+You can run checkcov from a container. It’s the best and most probably the recommended way one would run this in a production setting. The best part of it is you get the environment each time, and you don't need to bother installing all the dependencies in your workflow/pipeline.
+
+docker run --tty --volume \
+/path_to_your_awesome_project/:/tf \
+--workdir /tf bridgecrew/checkov --directory /tf
+
 
