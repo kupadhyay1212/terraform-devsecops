@@ -26,4 +26,9 @@ docker run --tty --volume \
 /path_to_your_awesome_project/:/tf \
 --workdir /tf bridgecrew/checkov --directory /tf
 
+# Run in Pre-Commit Stage
+Checkcov is a plugin you can use with pre-commit hooks. You can use it in your pre-commit config file like https://www.checkov.io/4.Integrations/pre-commit.html
+![image](https://github.com/kupadhyay1212/terraform-devsecops/assets/60917359/c292e305-2ee4-4d91-89fe-3724b204c821)
+
+
 
